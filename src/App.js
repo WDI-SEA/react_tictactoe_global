@@ -1,21 +1,66 @@
-import React, { Component } from 'react';
-import logo from './ga.png';
+import React from 'react';
+import './App.css';
 
-import Account from './Account';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
-class App extends Component {
-  render() {
-    return (
-      <div id="content">
-        <div id="nav">
-          <div id="logo"><img src={logo} alt="General Assembly logo" /></div>
-          <div id="title">Bank of GA</div>
-        </div>
-        <Account name="Checking" />
-        <div className="clear"></div>
-      </div>
-    );
-  }
+import Blog from './Blog.js';
+import Home from './Home.js';
+import About from './About.js';
+import Movie from './Movie.js';
+import Food from './Food.js';
+import './App.css';
+
+const post = {
+  title: "Baby's first post",
+  authors: [
+    "Stealthy Stegosaurus",
+    "Tiny trex",
+    "Iguanadon Ivory"
+  ],
+  body: "look at me i'm a posting baby!",
+  comments: [
+    "First!",
+    "Great post!",
+    "hire him!"
+  ]
 }
 
-export default App;
+const App = () => (
+  <Router>
+    <div>
+      <nav>
+      {/*
+      The {" "} things are inserted after every link so React puts
+      some empty whitespace between each link instead of cramming
+      them all together.
+
+      Also, this comment syntax is how you do comments in JSX.
+      */}
+        <Link to="/">Home</Link>{' '}
+        <Link to="/blog">My Blog</Link>{' '}
+        <Link to="/about">About moi</Link>{' '}
+        <Link to="/movie">The best movie</Link>{' '}
+        <Link to="/food">Favourite Food</Link>
+      </nav>
+
+      <hr/>
+
+      <Route exact path="/" component={Home}/>
+      <Route path="/about" component={About}/>
+      <Route path="/movie" component={Movie}/>
+      <Route path="/food" component={Food}/>
+      <Route path="/blog" component={
+        () => (<Blog title={post.title}
+                  allAuthors={post.authors}
+                  body={post.body}
+                  comments={post.comments} />
+        )}/>
+    </div>
+  </Router>
+)
+
+export default App
