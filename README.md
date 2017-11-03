@@ -8,9 +8,9 @@ You'll be adding a feature to this game.
 
 This tic-tac-toe game currently:
 
-* lets you play tic-tac-toe
-* indicates when one player has won the game
-* stores the history of moves during the game
+* Lets you play tic-tac-toe
+* Indicates when one player has won the game
+* Stores the history of moves during the game
 
 ### Setting up
 
@@ -32,15 +32,15 @@ Also, update `handleClick` so that when reading the current board state when you
 
 Note that the steps past the one you jump to do not need to disappear off the list. That is to say, from a board that looks like this:
 
-![board](board.png)
+![board](assets/board.png)
 
 Clicking on `Move #1` causes the board to jump back in time to move #1, but the move list has not changed.
 
-![board 2](./board2.png)
+![board 2](assets/board2.png)
 
 However, from there the game can be played and new moves can then be overwritten in the history.
 
-![board 3](./board3.png)
+![board 3](assets/board3.png)
 
 Try it yourself in the solution link above.
 
@@ -54,7 +54,7 @@ In this repository, there's a file called `hints.rtf` which includes a breakdown
 
 ## Solution
 
-Solution code is provided in the `solution_src` folder of this repository. Please give this your best go before looking! A Changelist is also provided in that folder with a brief explanation.
+Solution code is provided in the `solution` branch of this repository. Please give this your best go before looking! A Changelist is also provided with a brief explanation.
 
 This project was based off [this Facebook tutorial](https://facebook.github.io/react/tutorial/tutorial.html
 ). Click inside the link to see a thorough step by step tutorial of building out this tic tac toe app - note that in the tutorial, they don't split the components into different files.
