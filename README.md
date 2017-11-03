@@ -16,11 +16,9 @@ This tic-tac-toe game currently:
 
 * Fork and clone this repository.
 
-* You can run this with `npm start` from inside the `tictactoe` directory.
+* You can run this with `npm install` and then `npm start` from inside the directory.
 
-* The code that's running is in the /src directory - that's what you need to change!
-
-* The solution_src directory is just that - the solution - don't look before trying!
+* The code that's running is in the `src` directory - that's what you need to change!
 
 ### Task
 
@@ -51,7 +49,7 @@ Try it yourself in the solution link above.
 
 Note: In the code, a 'move' is also referred to as a 'step'.
 
-In the repository root folder, there is a file called `"hints.rtf"` which includes a breakdown (in English!) of what needs to be done.
+In this repository, there's a file called `hints.rtf` which includes a breakdown (in plain English) of what needs to be done.
 
 
 ## Solution
